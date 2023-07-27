@@ -55,7 +55,7 @@ const Projects = () => {
           </div>
         </div>
         <p className="mt-10 mb-10">
-          Checkout my recent projecets 
+          Checkout my recent projects 
           <br />
           Clicking on the image takes you to the github repo
         </p>
