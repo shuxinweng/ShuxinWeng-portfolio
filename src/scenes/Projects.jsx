@@ -25,7 +25,7 @@ const Project = ({ title, link }) => {
         <p className="text-2xl font-playfair">{title}</p>
       </div>
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <img src={`../assets/${projectTitle}.png`} alt={projectTitle} />
+        <img src={`assets/${projectTitle}.png`} alt={projectTitle} />
       </a>
     </motion.div>
   );
