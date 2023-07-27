@@ -15,20 +15,26 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, description }) => {
-  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
-    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
+const Project = ({ title, description, link }) => {
+  const overlayStyles = `
+    absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-90 transition duration-500
+    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue
+  `;
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   return (
     <motion.div variants={projectVariant} className="relative">
+      <a href={link} target="_blank" rel="noopener noreferrer">
+      <img
+        src={`../assets/${projectTitle}.png`}
+        alt={projectTitle}
+        className="transition-opacity duration-500 hover:opacity-90"
+      />
+      </a>
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">
-          {description}
-        </p>
+        <p className="mt-7">{description}</p>
       </div>
-      <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
     </motion.div>
   );
 };
@@ -79,12 +85,12 @@ const Projects = () => {
           >
             BEAUTIFUL USER INTERFACES
           </div>
-          <Project title="Recipe App" description="recipe-app" />
-          <Project title="Employee Management App" description="employee-management-app" />
+          <Project title="Recipe App" description="recipe-app" link="https://github.com/shuxinweng/recipe-app" />
+          <Project title="Employee Management App" description="employee-management-app" link="https://github.com/shuxinweng/employee-management-app" />
 
           {/* ROW 2 */}
-          <Project title="Task Manager" description="task-manager" />
-          <Project title="Memory Game" description="memory-game" />
+          <Project title="Task Manager" description="task-manager" link="https://github.com/shuxinweng/task-manager" />
+          <Project title="Memory Game" description="memory-game" link="https://github.com/shuxinweng/Memory_Game" />
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"

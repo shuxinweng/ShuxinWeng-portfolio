@@ -18,7 +18,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="contact py-48 flex items-center justify-center">
+    <section id="contact" className="contact py-48 flex flex-col items-center justify-center">
       {/* HEADINGS */}
       <motion.div
         initial="hidden"
@@ -29,31 +29,30 @@ const Contact = () => {
           hidden: { opacity: 0, x: 50 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="flex justify-end w-full"
+        className="w-full"
       >
-        <div>
+        <div className="text-center">
           <p className="font-playfair font-semibold text-4xl">
             <span className="text-yellow">CONTACT </span> ME
           </p>
-          <div className="flex md:justify-end my-5">
+          <div className="flex justify-center my-5">
             <LineGradient width="w-1/2" />
           </div>
         </div>
       </motion.div>
 
       {/* FORM & IMAGE */}
-      <div className="md:flex md:justify-between gap-16 mt-5">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          className="basis-1/2 mt-10 md:mt-0"
-        >
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        className="mt-10"
+      >
           <form
             target="_blank"
             onSubmit={onSubmit}
@@ -120,7 +119,6 @@ const Contact = () => {
             </button>
           </form>
         </motion.div>
-      </div>
     </section>
   );
 };
