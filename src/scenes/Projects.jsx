@@ -80,15 +80,20 @@ const Projects = () => {
             scrollSnapType: 'x mandatory', // Enable snapping to each project
           }}
         >
-          <Project
+          {/* <Project
             title="ArtiPic"
             link="https://github.com/shuxinweng/ArtiPic"
             imageSrc="assets/artipic.png"
-          />
+          /> */}
           <Project
             title="Recipe App"
             link="https://github.com/shuxinweng/recipe-app"
             imageSrc="assets/recipe-app.png"
+          />
+          <Project
+            title="ArtiPic"
+            link="https://github.com/shuxinweng/ArtiPic"
+            imageSrc="assets/artipic.png"
           />
           <Project
             title="Employee Management App"
