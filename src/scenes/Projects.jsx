@@ -77,6 +77,7 @@ const Projects = () => {
           >
             BEAUTIFUL USER INTERFACES
           </div>
+          <Project title="ArtiPic" link="https://github.com/shuxinweng/ArtiPic" />
           <Project title="Recipe App" link="https://github.com/shuxinweng/recipe-app" />
           <Project title="Employee Management App" link="https://github.com/shuxinweng/employee-management-app" />
 
