@@ -16,7 +16,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, link, imageSrc }) => {
+const Project = ({ title, link }) => {
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   return (
@@ -25,11 +25,7 @@ const Project = ({ title, link, imageSrc }) => {
         <p className="text-2xl font-playfair">{title}</p>
       </div>
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <img
-          src={`assets/${projectTitle}.png`}
-          alt={projectTitle}
-          className="project-image" // Apply styles in CSS for this class
-        />
+        <img src={`assets/${projectTitle}.png`} alt={projectTitle} />
       </a>
     </motion.div>
   );
@@ -80,36 +76,11 @@ const Projects = () => {
             scrollSnapType: 'x mandatory', // Enable snapping to each project
           }}
         >
-          {/* <Project
-            title="ArtiPic"
-            link="https://github.com/shuxinweng/ArtiPic"
-            imageSrc="assets/artipic.png"
-          /> */}
-          <Project
-            title="Recipe App"
-            link="https://github.com/shuxinweng/recipe-app"
-            imageSrc="assets/recipe-app.png"
-          />
-          <Project
-            title="ArtiPic"
-            link="https://github.com/shuxinweng/ArtiPic"
-            imageSrc="assets/artipic.png"
-          />
-          <Project
-            title="Employee Management App"
-            link="https://github.com/shuxinweng/employee-management-app"
-            imageSrc="assets/employee-management-app.png"
-          />
-          <Project
-            title="Task Manager"
-            link="https://github.com/shuxinweng/task-manager"
-            imageSrc="assets/task-manager.png"
-          />
-          <Project
-            title="Memory Game"
-            link="https://github.com/shuxinweng/Memory_Game"
-            imageSrc="assets/memory-game.png"
-          />
+          <Project title="ArtiPic" link="https://github.com/shuxinweng/ArtiPic" />
+          <Project title="Recipe App" link="https://github.com/shuxinweng/recipe-app" />
+          <Project title="Employee Management App" link="https://github.com/shuxinweng/employee-management-app" />
+          <Project title="Task Manager" link="https://github.com/shuxinweng/task-manager" />
+          <Project title="Memory Game" link="https://github.com/shuxinweng/Memory_Game" />
         </motion.div>
       </div>
     </section>
