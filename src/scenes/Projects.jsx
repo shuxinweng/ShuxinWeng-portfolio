@@ -28,7 +28,7 @@ const Project = ({ title, link, imageSrc }) => {
         <img
           src={`assets/${projectTitle}.png`}
           alt={projectTitle}
-          className="project-image"
+          className="project-image" // Apply styles in CSS for this class
         />
       </a>
     </motion.div>
