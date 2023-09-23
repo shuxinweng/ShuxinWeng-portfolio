@@ -16,7 +16,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, link }) => {
+const Project = ({ title, link, imageSrc }) => {
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   return (
@@ -25,7 +25,11 @@ const Project = ({ title, link }) => {
         <p className="text-2xl font-playfair">{title}</p>
       </div>
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <img src={`assets/${projectTitle}.png`} alt={projectTitle} />
+        <img
+          src={`assets/${projectTitle}.png`}
+          alt={projectTitle}
+          className="project-image"
+        />
       </a>
     </motion.div>
   );
@@ -55,41 +59,52 @@ const Projects = () => {
           </div>
         </div>
         <p className="mt-10 mb-10">
-          Checkout my recent projects 
+          Checkout my recent projects
           <br />
-          Clicking on the image takes you to the github repo
+          Clicking on the image takes you to the GitHub repo
         </p>
       </motion.div>
 
       {/* PROJECTS */}
       <div className="flex justify-center">
         <motion.div
-          className="sm:grid sm:grid-cols-3"
+          className="project-container"
           variants={container}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
+          style={{
+            display: 'flex',
+            overflowX: 'scroll',
+            width: '100%', // Adjust this width as needed
+            scrollSnapType: 'x mandatory', // Enable snapping to each project
+          }}
         >
-          {/* ROW 1 */}
-          <div
-            className="flex justify-center text-center items-center p-10 bg-red
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
-          >
-            BEAUTIFUL USER INTERFACES
-          </div>
-          <Project title="ArtiPic" link="https://github.com/shuxinweng/ArtiPic" />
-          <Project title="Recipe App" link="https://github.com/shuxinweng/recipe-app" />
-          <Project title="Employee Management App" link="https://github.com/shuxinweng/employee-management-app" />
-
-          {/* ROW 2 */}
-          <Project title="Task Manager" link="https://github.com/shuxinweng/task-manager" />
-          <Project title="Memory Game" link="https://github.com/shuxinweng/Memory_Game" />
-          <div
-            className="flex justify-center text-center items-center p-10 bg-blue
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
-          >
-            SMOOTH USER EXPERIENCE
-          </div>
+          <Project
+            title="ArtiPic"
+            link="https://github.com/shuxinweng/ArtiPic"
+            imageSrc="assets/artipic.png"
+          />
+          <Project
+            title="Recipe App"
+            link="https://github.com/shuxinweng/recipe-app"
+            imageSrc="assets/recipe-app.png"
+          />
+          <Project
+            title="Employee Management App"
+            link="https://github.com/shuxinweng/employee-management-app"
+            imageSrc="assets/employee-management-app.png"
+          />
+          <Project
+            title="Task Manager"
+            link="https://github.com/shuxinweng/task-manager"
+            imageSrc="assets/task-manager.png"
+          />
+          <Project
+            title="Memory Game"
+            link="https://github.com/shuxinweng/Memory_Game"
+            imageSrc="assets/memory-game.png"
+          />
         </motion.div>
       </div>
     </section>

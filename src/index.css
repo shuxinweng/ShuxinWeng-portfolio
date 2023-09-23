@@ -12,3 +12,17 @@ body,
   background-color: #010026;
   @apply text-white;
 }
+
+.project-container {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%; /* Adjust this width as needed */
+  scroll-snap-type: x mandatory; /* Enable snapping to each project */
+}
+
+.relative {
+  /* Adjust the styling for individual project items here */
+  flex: 0 0 auto; /* Ensures that each project takes up its content width */
+  scroll-snap-align: start; /* Align each project to the start of the container */
+  margin-right: 20px; /* Add spacing between projects */
+}
