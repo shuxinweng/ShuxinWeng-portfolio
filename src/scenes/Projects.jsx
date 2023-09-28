@@ -72,7 +72,7 @@ const Projects = () => {
           style={{
             display: 'flex',
             overflowX: 'scroll',
-            width: '100%', // Adjust this width as needed
+            width: '10%', // Adjust this width as needed
             // another apporach to adjust the size is to get the size of 
             // the png in the assets folder all the same to avoid confusion.
             scrollSnapType: 'x mandatory', // Enable snapping to each project
