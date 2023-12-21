@@ -25,7 +25,7 @@ const Project = ({ title, link }) => {
         <p className="text-2xl font-playfair">{title}</p>
       </div>
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <img src={`assets/${projectTitle}.png`} alt={projectTitle} />
+        <img src={`assets/${projectTitle}.png`} alt={projectTitle} style={{ width: '200px', height: '150px' }} />
       </a>
     </motion.div>
   );
@@ -72,15 +72,16 @@ const Projects = () => {
           style={{
             display: 'flex',
             overflowX: 'scroll',
-            width: '100%', // Adjust this width as needed
-            // another apporach to adjust the size is to get the size of 
-            // the png in the assets folder all the same to avoid confusion.
-            scrollSnapType: 'x mandatory', // Enable snapping to each project
+            width: '100%',
+            scrollSnapType: 'x mandatory', 
           }}
         >
+          <Project title="SMCWRx" link="https://github.com/SMCW-Rx/SMCW-Rx" />
           <Project title="ArtiPic" link="https://github.com/shuxinweng/ArtiPic" />
-          <Project title="Recipe App" link="https://github.com/shuxinweng/recipe-app" />
+          <Project title="UpFly" link="https://github.com/shuxinweng/UpFly" />
+          <Project title="Adventure" link="https://github.com/shuxinweng/Adventure" />
           <Project title="Employee Management App" link="https://github.com/shuxinweng/employee-management-app" />
+          <Project title="Recipe App" link="https://github.com/shuxinweng/recipe-app" />
           <Project title="Task Manager" link="https://github.com/shuxinweng/task-manager" />
           <Project title="Memory Game" link="https://github.com/shuxinweng/Memory_Game" />
         </motion.div>
